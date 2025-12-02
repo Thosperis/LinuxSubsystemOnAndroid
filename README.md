@@ -38,7 +38,7 @@ Touch and Gestures
 Camera -- Video Capture 
 
 ---------
-
+NOTICE: Dev rootfs not avalible yet (its like 32gb i've gotta find a mirror)
 If installing Dev rootfs
 
 Instructions:
