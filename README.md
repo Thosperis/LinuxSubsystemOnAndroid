@@ -27,7 +27,7 @@ Microphone recordings
 
 -------
 
-My current goals are:
+My current queue is:
 
 Make a custom Xserver for true GPU acceleration -- Active Devolopment | Priority
 
