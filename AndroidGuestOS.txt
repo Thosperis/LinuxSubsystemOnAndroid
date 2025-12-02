@@ -1,0 +1,55 @@
+umount -l /data/local/linux/dev/pts
+umount -l /data/local/linux/dev
+umount -l /data/local/linux/proc
+umount -l /data/local/linux/sys
+umount -l /data/local/linux/mnt/sdcard
+umount /data/local/linux/dev/pts
+umount /data/local/linux/dev
+umount /data/local/linux/proc
+umount /data/local/linux/mnt/sdcard
+
+mount | grep /data/local/linux
+
+audiobootstrap
+/usr/bin/HALAudioAutouser.sh
+
+/opt/andgl/shim
+For Custom Xserver
+Xvfb :99 -screen 0 520x1200x24 &
+export DISPLAY=:99
+DISPLAY=:99 startlxde &
+DISPLAY=:99 LD_PRELOAD=/opt/andgl/libGL.so /opt/andgl/xmirror
+
+------------------
+To install:
+Android side
+https://github.com/termux/termux-api/releases/download/v0.53.0/termux-api-app_v0.53.0+github.debug.apk
+https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk
+mkdir /data/local/halbridge
+mv halagent.py /data/local/halbridge
+mv HALAudioS.py /data/data/com.termux/files/home/HALAudio
+mkdir /data/local/linux
+mkdir /data/local/linux/halbridge
+cp /data/data/com.termux/files/home/.proot-distro/debian/rootfs/ /data/local/linux
+mv start-chroot.sh /data/local/linux
+./start-chroot.sh &
+python3 halagent.py &
+python HALAudioS.py -- as termux
+--- debian side ---
+mv androidctl /usr/local/bin/androidctl
+mv HALAudio.py /system/HALAudio
+mv HALAudio /usr/local/bin/
+chmod +x /usr/local/bin/HALAudio
+mv androidctl /usr/local/bin/
+chmod +x /usr/local/bin/androidctl
+mv HALAudioAutouser.sh /usr/local/bin/
+==
+chmod +x /usr/local/bin/HALAudioAutouser.sh
+==
+/etc/rc.local
+#!/bin/sh
+/usr/local/bin/HALAudioAutouser.sh
+exit 0
+==
+chmod +x /etc/rc.local
+apt install surf
