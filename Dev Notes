@@ -31,3 +31,6 @@ DISPLAY=:99 startlxde &
 DISPLAY=:99 LD_PRELOAD=/opt/andgl/libGL.so /opt/andgl/xmirror
 
 ------------------
+
+
+cd /opt/andgl
