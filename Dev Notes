@@ -34,3 +34,10 @@ DISPLAY=:99 LD_PRELOAD=/opt/andgl/libGL.so /opt/andgl/xmirror
 
 
 cd /opt/andgl
+
+gcc -shared -fPIC -o libGL_shim.so libGL_shim.c -ldl -lGL -lm
+LD_PRELOAD=/opt/andgl/shim_remote/libGL_shim.so glxgears
+LD_PRELOAD=/opt/andgl/shim_remote/libGL_shim.so /opt/andgl/clear_only   
+LD_PRELOAD=/opt/andgl/shim_remote/libGL_shim.so /opt/andgl/glclear_test 
+/opt/andgl/proto_clear
+LD_PRELOAD=/opt/andgl/libGL.so glxgears
