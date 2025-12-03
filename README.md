@@ -29,7 +29,7 @@ Microphone recordings
 
 My current queue is:
 
-Make a custom Xserver for true GPU acceleration -- Active Devolopment | Priority
+Make a OpenGL shim and GL compositor -- Active Devolopment | Priority
 
 Live Microphone recording 
 
