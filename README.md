@@ -29,7 +29,9 @@ Microphone recordings
 
 My current queue is:
 
-Make a OpenGL shim and GL compositor -- Active Devolopment | Priority
+VirGL + Java App -- Active Devolopment | Priority
+
+Make a OpenGL shim and GL compositor | Scrapped, I got like 90% done before I realised I could do something better
 
 Live Microphone recording 
 
