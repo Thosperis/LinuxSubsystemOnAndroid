@@ -1,12 +1,9 @@
-FLASH ON/OFF
+
 
 VIBRATE support
 
 SCREEN_BRIGHTNESS control
 
-BATTERY_INFO
-
-NETWORK_INFO
 
 SENSORS (accelerometer/gyroscope)
 
@@ -14,3 +11,9 @@ Full Android↔Linux clipboard sync
 
 USB passthrough
 
+Python sends commands/frames/meta over a port
+Android Java turns that into GLES drawing
+GLES renders into a SurfaceView 
+
+so python doesnt capture anything, its just telling the surfaceview to display these frames here
+it does not matter if the controller of the frames for the live view is slow or not because it just needs to show what it is exactly for PhoneUI
