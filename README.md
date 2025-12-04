@@ -5,7 +5,7 @@ REQUIREMENTS:
 
 root
 
-Android 7+ Supported -- planned to extend to Android 2.3
+Android 7+ Supported -- planned to extend to Android 4.4.4
 
 Should work on any android with root
 
