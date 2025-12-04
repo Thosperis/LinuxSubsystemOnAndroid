@@ -25,6 +25,12 @@ Speakers/Bluetooth -- Full Audio Routing
 
 Microphone recordings
 
+BATTERY_INFO
+
+FLASH ON/OFF
+
+NETWORK_INFO
+
 -------
 
 My current queue is:
