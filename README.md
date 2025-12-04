@@ -35,7 +35,7 @@ Make a OpenGL shim and GL compositor | Scrapped, I got like 90% done before I re
 
 Live Microphone recording 
 
-PhoneUI -- Active Devolopment 
+PhoneUI -- Active Devolopment | Click PhoneUIidea.png to see what im currently devoloping it as
 
 
 Camera -- Video Capture 
